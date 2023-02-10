@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         { arr.map((title) => (
           <Article
+            key={title}
             title={title}
             content='同じ'
           />
