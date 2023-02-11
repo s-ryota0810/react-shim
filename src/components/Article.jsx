@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Content, Title, Checkbox, PublishButton } from './index'
+import { Content, Title, PublishButton, TextInput, Counter } from './index'
 
 const Article = (props) => {
 	const [isPublished, setIsPublished] = useState(false)
@@ -13,8 +13,9 @@ const Article = (props) => {
 			<Title title={changeTitle} />
 			<Content content={props.content} />
 			{/* <button onClick={() => setIsPublished(!isPublished)}>公開</button> */}
-			<Checkbox checked={isPublished} />
 			<PublishButton onClick={publishArticle} isPublished={isPublished} />
+			<TextInput />
+			<Counter />
 		</>
 	)
 }
