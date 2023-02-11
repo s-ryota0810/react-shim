@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const ToggleButton = () => {
 	const [isOk, setIsOk] = useState(true)
@@ -6,9 +6,19 @@ const ToggleButton = () => {
 		setIsOk(prevState => !prevState)
 	}
 	
+	useEffect(() => {
+		console.log('current is' + isOk)
+		if (isOk) {
+			console.log('subscribed!');
+		}
+		return () => {
+			console.log('unsubscribed...');
+		}
+	})
+	
 	return(
 		<button onClick={handleIsOk}>
-			{ isOk ? 'OKです' : 'NGです'}
+			{ isOk ? 'OK' : 'NG'}
 		</button>
 	)
 }

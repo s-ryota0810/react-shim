@@ -14,16 +14,14 @@ function App() {
   // const handleIsPublished = () => {
   //   setIsPublished(!isPublished)
   // }
-  
 
   return (
     <div className="App">
-			{/* <Title title={title} /> */}
-			{/* <Content content={props.content} /> */}
-			{/* <button onClick={() => setIsPublished(!isPublished)}>公開</button> */}
-			{/* <PublishButton onClick={handleIsPublished} isPublished={isPublished} /> */}
-			{/* <TextInput /> */}
-			{/* <Counter /> */}
+			{/* <Title title={title} />
+			<Content content={content} />
+			<PublishButton onClick={handleIsPublished} isPublished={isPublished} /><br />
+			<TextInput />
+			<Counter /> */}
       <ToggleButton />
     </div>
   );

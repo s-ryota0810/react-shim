@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Counter = () => {
 	const [num, setNum] = useState(0);
+	const [num2, setNum2] = useState(0);
 	
 	const countUp = () => {
 		setNum(prevState =>	prevState + 1);
@@ -11,13 +12,30 @@ const Counter = () => {
 		setNum(prevState => prevState - 1);
 	}
 	
+	const count2Up = () => {
+		setNum2(prevState => prevState + 2);
+	}
+	
+	const count2Down = () => {
+		setNum2(prevState => prevState - 2);
+	}
+	
+	useEffect(() => {
+		console.log('current', num)
+	}, [num])
+	
 	return (
 		<>
 			<div>
-				<button onClick={countUp}>+</button><br />
-				<button onClick={countDown}>-</button>		
+				<p>現在のカウント数: {num}</p>
+				<button onClick={countUp}>カウントあっぷ</button><br />
+				<button onClick={countDown}>カウントダウン</button>		
 			</div>
-			<p>{num}</p>
+			<div>
+				<p>現在のカウント2数：{num2}</p>
+				<button onClick={count2Up}>カウント２アップ</button>
+				<button onClick={count2Down}>カウント２ダウン</button>
+			</div>
 		</>
 	)
 }
