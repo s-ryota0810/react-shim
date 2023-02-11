@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Content, Title, PublishButton, TextInput, Counter } from './components/index'
+import { Content, Title, PublishButton, TextInput, Counter, ToggleButton } from './components/index'
 import './App.css';
 
 function App() {
@@ -22,8 +22,9 @@ function App() {
 			{/* <Content content={props.content} /> */}
 			{/* <button onClick={() => setIsPublished(!isPublished)}>公開</button> */}
 			{/* <PublishButton onClick={handleIsPublished} isPublished={isPublished} /> */}
-			<TextInput />
-			<Counter />
+			{/* <TextInput /> */}
+			{/* <Counter /> */}
+      <ToggleButton />
     </div>
   );
 }
