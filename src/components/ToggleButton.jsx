@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 
 const ToggleButton = () => {
-	const [isOk, setIsOk] = useState(true)
+	const [open, setOpen] = useState(true)
 	const handleIsOk = () => {
-		setIsOk(prevState => !prevState)
+		setOpen(prevState => !prevState)
 	}
 	
 	useEffect(() => {
-		console.log('current is' + isOk)
-		if (isOk) {
+		console.log('current is' + open)
+		if (open) {
 			console.log('subscribed!');
 		}
 		return () => {
@@ -18,7 +18,7 @@ const ToggleButton = () => {
 	
 	return(
 		<button onClick={handleIsOk}>
-			{ isOk ? 'OK' : 'NG'}
+			{ open ? 'OPEN' : 'CLOSE'}
 		</button>
 	)
 }
