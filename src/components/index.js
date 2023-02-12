@@ -4,3 +4,5 @@ export { default as PublishButton } from './PublishButton';
 export { default as TextInput } from './TextInput';
 export { default as Counter } from './Counter';
 export { default as ToggleButton } from './ToggleButton';
+export { default as TodoList } from './TodoList';
+export { default as Todo } from './Todo';
