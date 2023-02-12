@@ -1,10 +1,10 @@
-const Todo = ({todo}) => {
+const Todo = ({todo, onClick}) => {
 	return (
-		<div>
+		<div className="todo">
 			<label>
-				<input type="checkbox" checked={todo.completed} readOnly />
+				<input type="checkbox" onChange={() => onClick(todo.id)} />
+				<span>{todo.name}</span>
 			</label>
-			{todo.name}
 		</div>
 		
 	)
